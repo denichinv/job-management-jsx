@@ -39,6 +39,17 @@
 
 
 }
+
+#footer{
+  background-color: rgba(176, 186, 194, 0.244);
+  position: fixed; 
+  bottom: 0;
+  left: 0;
+  width: 100%; 
+  text-align: center; 
+  z-index: 10; 
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
