@@ -1,0 +1,87 @@
+/* Form Container */
+.form-header {
+  max-width: 500px; 
+  margin: 50px auto; 
+  padding: 20px; 
+  background-color: #f9f9f9; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Field */
+input[type="text"] {
+  width: 100%; 
+  padding: 10px; 
+  margin-bottom: 15px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  font-size: 16px; 
+  box-sizing: border-box; 
+}
+
+/* Buttons in the Job Type Section */
+.bottom-line button {
+  background-color: #007bff; 
+  color: white; 
+  border: none; 
+  padding: 10px 15px;
+  margin-right: 10px; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  font-size: 14px; 
+}
+
+.bottom-line button:hover {
+  background-color: #0056b3; 
+}
+
+/* Dropdown */
+.job-status {
+  width: 100%; 
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+  font-size: 16px; 
+  background-color: white; 
+}
+
+/* Submit Button */
+.submit-data {
+  background-color: #28a745; 
+  color: white; 
+  border: none; 
+  padding: 12px 20px; 
+  margin-top: 20px; 
+  border-radius: 4px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  width: 100%; 
+}
+
+.submit-data:hover {
+  background-color: #218838; 
+}
+
+/* General Typography */
+form {
+  font-family: Arial, sans-serif;
+  color: #333; 
+}
+
+p, label {
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-header {
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+
+  .bottom-line button {
+    margin-bottom: 10px; /* Add spacing below buttons for small screens */
+    width: 100%; /* Full-width buttons */
+  }
+}
