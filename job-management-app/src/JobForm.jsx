@@ -2,6 +2,7 @@ import './Jobform.css'
 
 function JobForm() {
   return (
+   <>
     <div className='form-header'>
       <form>
          <input type="text" placeholder='Enter a job title' value={""}   />
@@ -16,7 +17,7 @@ function JobForm() {
             </div>
 
             <select className="job-status">
-  <option value="start">Start Process</option>
+
   <option value="running">Running</option>
   <option value="completed">Completed</option>
   <option value="stopped">Stopped</option>
@@ -25,7 +26,15 @@ function JobForm() {
 <button type="submit" className="submit-data">Add Job</button>
 </div>
       </form>
+
+      
     </div>
+    <main className='columns'>
+      <section className='column1'>Completed</section>
+      <section className='column2'>Running</section>
+      <section className='column3'>Stopped</section>
+    </main>
+    </>
   )
 }
 

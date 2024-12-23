@@ -11,9 +11,9 @@ function App() {
   return (
     <>
   <Header/>
-  <main>
+
     <JobForm/>
-  </main>
+ 
   <Footer/>
     </>
   )

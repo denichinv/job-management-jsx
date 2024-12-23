@@ -86,3 +86,29 @@ input[type="text"] {
     font-size: 14px;
   }
 }
+
+.columns{
+  display:flex;
+  justify-content: space-evenly;
+  margin: 40px 0px 0px 0px;
+  padding: 30px 8%;
+}
+.column1{
+  background: mediumseagreen;
+  width: 33.33%;
+  margin-left:2px;
+  margin-right:2px;
+}
+.column2{
+  background:sandybrown;
+  width: 33.33%;
+  margin-left:2px;
+  margin-right:2px;
+
+}
+.column3{
+  background: salmon;
+  width: 33.33%;
+  margin-left:2px;
+  margin-right:2px;
+}
