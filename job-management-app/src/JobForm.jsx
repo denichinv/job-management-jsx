@@ -1,5 +1,6 @@
 import './Jobform.css'
 import { JobButtons } from './JobButtons'
+import { JobColumns } from './JobColumns'
 
 function JobForm() {
   return (
@@ -31,9 +32,9 @@ function JobForm() {
       
     </div>
     <main className='columns'>
-      <section className='column1'>Completed</section>
-      <section className='column2'>Running</section>
-      <section className='column3'>Stopped</section>
+      <JobColumns className="needtostart" value="Need to Start"/>
+      <JobColumns className="inprocess" value="In Progress"/>
+      <JobColumns className="completed" value="Completed"/>
     </main>
     </>
   )

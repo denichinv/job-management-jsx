@@ -1,0 +1,31 @@
+.columns{
+    display:flex;
+    justify-content: space-evenly;
+    margin: 40px 0px 0px 0px;
+    padding: 30px 8%;
+  }
+  .completed{
+    background: mediumseagreen;
+    width: 33.33%;
+    margin-left:2px;
+    margin-right:2px;
+  }
+  .inprocess{
+    background:sandybrown;
+    width: 33.33%;
+    margin-left:2px;
+    margin-right:2px;
+  
+  }
+  .needtostart{
+    background: salmon;
+    width: 33.33%;
+    margin-left:2px;
+    margin-right:2px;
+  }
+
+ h3{
+    text-align:center ;
+    color: white;
+    font-weight: 600;
+ }
