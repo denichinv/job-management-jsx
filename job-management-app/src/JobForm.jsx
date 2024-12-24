@@ -1,4 +1,5 @@
 import './Jobform.css'
+import { JobButtons } from './JobButtons'
 
 function JobForm() {
   return (
@@ -10,9 +11,9 @@ function JobForm() {
         <div className="form-details">
             
             <div className="bottom-line">
-            <button value="">Read Emails</button>
-            <button value="">Web Parsing</button>
-            <button value="">Send Emails</button> 
+            <JobButtons value="Read Emails"/>
+            <JobButtons value="Web Parsing"/>
+            <JobButtons value="Send Emails"/>
             </div>
             </div>
 
