@@ -1,0 +1,24 @@
+.jobbox {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0;
+    padding: 0px 8%;
+}
+
+.jobstatus-box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px;
+    background: white;
+    border-radius: 4px;
+    width: 98%;
+}
+
+.JobStateArticle {
+    width: 100%;
+}
+
+.textArticle {
+    margin: 0;
+    color: #333;
+}
