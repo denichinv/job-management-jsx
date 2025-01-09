@@ -7,16 +7,22 @@ import { JobStatus } from './JobStatus'
 function JobForm() {
   const [jobTitle, setJobTitle] = useState('')
   const [jobStatus, setJobStatus] = useState('running')
+  const [jobType, setJobType] = useState('')
   const [needToStart, setNeedToStart] = useState([])
   const [inProgress, setInProgress] = useState([])
   const [completed, setCompleted] = useState([])
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    if (!jobType) {
+      alert('Please select a job type')
+      return
+    }
     
     const newJob = {
       id: Date.now(),
-      title: jobTitle
+      title: jobTitle,
+      type: jobType
     }
 
     switch(jobStatus) {
@@ -34,6 +40,7 @@ function JobForm() {
     }
 
     setJobTitle('')
+    setJobType('')
   }
 
   const handleDelete = (id, column) => {
@@ -52,6 +59,11 @@ function JobForm() {
     }
   }
 
+  const handleJobTypeSelect = (type) => {
+    setJobType(type)
+    setJobTitle(type)
+  }
+
   return (
     <>
       <div className='form-header'>
@@ -66,9 +78,21 @@ function JobForm() {
    
           <div className="form-details">
             <div className="bottom-line">
-              <JobButtons value="Read Emails"/>
-              <JobButtons value="Web Parsing"/>
-              <JobButtons value="Send Emails"/>
+              <JobButtons 
+                value="Read Emails" 
+                onClick={() => handleJobTypeSelect('Read Emails')}
+                isSelected={jobType === 'Read Emails'}
+              />
+              <JobButtons 
+                value="Web Parsing" 
+                onClick={() => handleJobTypeSelect('Web Parsing')}
+                isSelected={jobType === 'Web Parsing'}
+              />
+              <JobButtons 
+                value="Send Emails" 
+                onClick={() => handleJobTypeSelect('Send Emails')}
+                isSelected={jobType === 'Send Emails'}
+              />
             </div>
           </div>
 
@@ -92,7 +116,7 @@ function JobForm() {
         <JobColumns className="needtostart" status="Need to Start">
           {needToStart.map(job => (
             <div key={job.id} className="jobstatus-box">
-              <JobStatus title={job.title} />
+              <JobStatus title={`${job.title} (${job.type})`} />
               <JobButtons value="delete" onClick={() => handleDelete(job.id, 'needToStart')} />
             </div>
           ))}
@@ -101,7 +125,7 @@ function JobForm() {
         <JobColumns className="inprocess" status="In Progress">
           {inProgress.map(job => (
             <div key={job.id} className="jobstatus-box">
-              <JobStatus title={job.title} />
+              <JobStatus title={`${job.title} (${job.type})`} />
               <JobButtons value="delete" onClick={() => handleDelete(job.id, 'inProgress')} />
             </div>
           ))}
@@ -110,7 +134,7 @@ function JobForm() {
         <JobColumns className="completed" status="Completed">
           {completed.map(job => (
             <div key={job.id} className="jobstatus-box">
-              <JobStatus title={job.title} />
+              <JobStatus title={`${job.title} (${job.type})`} />
               <JobButtons value="delete" onClick={() => handleDelete(job.id, 'completed')} />
             </div>
           ))}

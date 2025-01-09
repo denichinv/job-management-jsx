@@ -1,19 +1,24 @@
+.bottom-line button {
+  flex: 1 1 auto;
+  min-width: 120px;
+  max-width: 200px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
 
-  .bottom-line button {
-    flex: 1 1 auto;
-    min-width: 120px;
-    max-width: 200px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  .bottom-line {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
+.bottom-line button.selected {
+  background-color: #28a745;
+  border: 2px solid #1e7e34;
+}
+
+.bottom-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}

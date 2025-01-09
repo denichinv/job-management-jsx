@@ -1,17 +1,23 @@
 import PropTypes from 'prop-types';
 import "./JobButtons.css"
 
-export const JobButtons = ({ value, onClick }) => {
+export const JobButtons = ({ value, onClick, isSelected }) => {
   return (
     <div>
-      <button className='bottom-line' onClick={onClick}>{value}</button>
+      <button 
+        className={`bottom-line ${isSelected ? 'selected' : ''}`} 
+        onClick={onClick}
+      >
+        {value}
+      </button>
     </div>
   );
 };
 
 JobButtons.propTypes = {
   value: PropTypes.string.isRequired,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  isSelected: PropTypes.bool
 };
 
 export default JobButtons;
